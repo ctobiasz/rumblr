@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 
+enable :sesions
+
 set :database, {adapter: "sqlite3", database: "database.sqlite3"}
 
 class User < ActiveRecord::Base
@@ -11,7 +13,9 @@ class Post < ActiveRecord::Base
 end
 
 get "/" do
-  erb :home => false layout
+  p sessions
+  erb :home,:layout => false do
+  end
 end
 
 # ===== USER ROUTES =====
@@ -41,13 +45,14 @@ get "/posts/new" do
 end
 
 post "/posts/new" do # CREATE
-  post = Post.new(title: params['title'], context: params['context'])
+  @post = Post.new(title: params['title'], content: params['content'])
   @post.save
-  erb :"/posts/new"
+
+  redirect :"/posts/#{@post.id}"
 end
 
 get "/posts/:id" do
   @post = Post.find(params['id'])
 
-  erb :"/posts/new"
+  erb :"/posts/show"
 end
