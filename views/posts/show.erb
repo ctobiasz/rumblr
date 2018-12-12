@@ -1,2 +1,18 @@
-<h1>Title: <br /><%= @post.title %></h1>
+<h1>Title: <%= @post.title %></h1>
 <p> <%= @post.content %></p>
+<p> <%= session['user_email'] %></p>
+
+
+
+<form action="/posts/?" method="get">
+  <input type="submit" value="View all posts" />
+</form>
+
+
+<hr>
+
+
+<p> Delete this post</p>
+<form action="/posts/<%= @post.id %>" method="post">
+  <input type="submit" value="Delete Post">
+</form>

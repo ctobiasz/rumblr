@@ -4,3 +4,27 @@
 <h3>Last Name: <%= @user.last_name %></h3>
 <h3>Email: <%= @user.email %></h3>
 <h3>Birthday: <%= @user.birthday %></h3>
+
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+<p> Delete this account</p>
+<form action="/users/<%= @user.id %>" method="post">
+  <input type="submit" value="Delete Account" onclick="alert('Account Deleted.')">
+</form>
