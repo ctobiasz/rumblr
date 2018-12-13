@@ -100,7 +100,7 @@ end
 post "/posts/:id" do
     @post =  Post.find(params['id'])
     @post.destroy
-    redirect "/"
+    redirect :"/users/#{session["user_id"]}"
 end
 
 # ===== LOGOUT ROUTES =====
