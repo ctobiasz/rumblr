@@ -14,8 +14,7 @@ end
 
 get "/" do
   p session
-  erb :home,:layout => false do
-  end
+  erb :home
 end
 
 # ===== LOGIN ROUTES =====
@@ -53,6 +52,7 @@ end
 
 get "/users/:id" do # READ
   @user = User.find(params['id'])
+  @posts = Post.where(user_id: params['id']).last(20)
   erb :"/users/show"
 end
 
@@ -83,7 +83,7 @@ post "/posts/new" do # CREATE
   p "Post has been created"
   @post = Post.new(title: params['title'], content: params['content'], user_id: session['user_id'])
   @post.save
-  redirect :"/posts/#{@post.id}"
+  redirect :"/users/#{session["user_id"]}"
 end
 
 get "/posts/:id" do

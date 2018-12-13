@@ -7,10 +7,20 @@
 
 <hr>
 
-<hr>
 
 
 <p> Delete this account</p>
 <form action="/users/<%= @user.id %>" method="post">
   <input type="submit" value="Delete Account" onclick="alert('Account Deleted.')">
 </form>
+
+<hr>
+
+
+<% @posts.each do |ps| %>
+<h2><%= ps.title %></h2>
+<p><%= ps.content %></p>
+<% end %>
+
+
+<hr>
