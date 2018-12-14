@@ -4,10 +4,10 @@ require 'sinatra/activerecord'
 enable :sessions
 
 
-if ENV['RACK_ENV'] == 'development'
-  set :database, {adapter: "sqlite3", database: "database.sqlite3"}
-else
+if ENV['RACK_ENV']
   ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+else
+  set :database, {adapter: "sqlite3", database: "database.sqlite3"}
 end
 
 
@@ -20,6 +20,7 @@ end
 
 get "/" do
   p session
+  @req = request.path
   erb :home
 end
 

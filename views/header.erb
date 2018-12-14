@@ -1,15 +1,18 @@
-<ul>
+
+<div class="container-header">
+  <h1 class="space"><a href="/users/<%= session['user_id'] %>">SPACE</a></h1>
+  <div class="row-header">
+
    <% if session['user_id'] == nil %>
-   <li><a href="/">Home</a></li>
-   <li><a href="/users/new">Sign-up</a></li>
-   <!-- <li><a href="/login">Log In</a></li> -->
-   <li><a href="/users/?">All Users</a></li>
+  <a class="navbtn" href="/">Home</a>
+  <a class="navbtn" href="/users/new">Sign-up</a>
+  <a class="navbtn" href="/users/?">All Users</a>
    <% end %>
 
    <% if session['user_id'] %>
-   <li><a href="/posts/new">New Post</a></li>
-   <li><a href="/posts/?">Home Feed</a></li>
-   <li><a href="/users/<%= session['user_id'] %>">My Profile</a></li>
+  <a class="navbtn" href="/posts/new">New Post</a>
+  <a class="navbtn" href="/posts/?">Home Feed</a>
+  <a class="navbtn" href="/users/<%= session['user_id'] %>">My Profile</a>
 
 
 
@@ -18,4 +21,5 @@
    </form>
    <% end %>
 
-</ul>
+ </div>
+ </div>
