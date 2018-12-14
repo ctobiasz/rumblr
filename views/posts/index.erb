@@ -1,4 +1,7 @@
+<div class="container-feedposts">
 <% @posts.each do |ps| %>
-<h2><%= ps.title %></h2>
-<p><%= ps.content %></p>
+<h2 id="feed-header"><%= ps.title %></h2>
+<p id="feedpara"><%= ps.content %></p>
+
+
 <% end %>

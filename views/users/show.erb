@@ -30,13 +30,14 @@
 
 <div class="container-profileposts">
 <% @posts.reverse.each do |ps| %>
-<h2><%= ps.title %></h2>
-<p><%= ps.content %></p>
+<h2 id="profile-header"><%= ps.title %></h2>
+<p id="profilepara"><%= ps.content %></p>
 
 <p> Delete this post</p>
 <form action="/posts/<%= ps.id %>" method="post">
   <input type="submit" value="Delete Post">
 </form>
+<hr>
 
 
 <% end %>
