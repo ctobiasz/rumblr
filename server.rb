@@ -100,7 +100,7 @@ get "/posts/:id" do
 end
 
 get "/posts/?" do
- @posts = Post.all
+ @posts = Post.all.reverse
  erb :"/posts/index"
 end
 

@@ -47,19 +47,23 @@
 }
 .navbtn {
   padding: 10px;
+  padding-bottom: 35px;
   border: 1px dashed #C4C4C9;
   color: white;
+
 }
 
 .navbtn:hover {
   background: #626271;
 }
 
-.space {
+#space {
   font-family: 'Cinzel Decorative', cursive;
-  color: white;
   text-shadow: 1px 0px 11px rgba(228,208,208,0.6);
   float:left;
+}
+#space1 {
+  color: white;
 }
 
 
@@ -105,4 +109,33 @@
   justify-content: center;
   align-items: center;
 
+}
+
+/* PROFILE */
+
+.container-profile {
+  border: 1px solid white;
+}
+
+.container-profile1 {
+  display: grid;
+  margin-top: 5%;
+  float: right;
+  border: 1px solid #626271;
+  padding: 10px;
+}
+
+.container-profileposts{
+
+}
+
+#deleteprofilepara {
+display: grid;
+justify-content: center;
+}
+
+#deleteprofile {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 2%;
 }
