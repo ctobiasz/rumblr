@@ -1,15 +1,13 @@
-<h1>Please sign-up below:</h1>
+<div id="posterstrudel">
+  <h1 id="header-newpost">New Post</h1>
 
 
 
-<form action="/posts/new" method="post">
+  <form id="newpost-forma" action="/posts/new" method="post">
+    <input class="entertitle" type="title" name="title" placeholder="Enter post title"><br />
+    <br>
+    <textarea name="content" rows="20" placeholder="Enter post content here"></textarea>
+    <input type="submit" name="submit">
 
-  <input type="title" name="title" placeholder="Enter post title"><br />
-  <textarea name="content" rows="20"></textarea>
-
-
-<p>
-  <input type="submit" name="submit">
-</p>
-
-</form>
+  </form>
+</div>

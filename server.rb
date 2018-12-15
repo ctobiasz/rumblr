@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'bcrypt'
 
 enable :sessions
 
@@ -12,10 +13,22 @@ end
 
 
 class User < ActiveRecord::Base
+  has_many :posts, dependent: :destroy
+  include BCrypt
+
+  def password
+    @password ||= Password.new(password_hash)
+  end
+
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_hash = @password
+  end
 end
 
 
 class Post < ActiveRecord::Base
+  belongs_to :user
 end
 
 get "/" do
@@ -26,6 +39,7 @@ end
 
 # ===== LOGIN ROUTES =====
 get "/login" do # READ
+  session['user_id'] = nil
   erb :'/users/login'
 end
 
@@ -71,6 +85,7 @@ end
 post "/users/:id" do
   @user = User.find(params['id'])
   @user.destroy
+  session.clear
   redirect "/"
 end
 
@@ -113,5 +128,6 @@ end
 # ===== LOGOUT ROUTES =====
 post "/logout" do
   session['user_id'] = nil
+  p session
   redirect "/"
 end

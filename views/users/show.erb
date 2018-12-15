@@ -3,25 +3,24 @@
 
   <div class="container-profile1">
 
-  <h1> <%= @user.first_name %>'s  Profile </h1>
+    <h1> <%= @user.first_name %>'s  Profile </h1>
+    <hr>
+
+    <h3>First Name: <%= @user.first_name %></h3>
+    <h3>Last Name: <%= @user.last_name %></h3>
+    <h3>Email: <%= @user.email %></h3>
+    <h3>Birthday: <%= @user.birthday %></h3>
+
+
   <hr>
 
-  <h3>First Name: <%= @user.first_name %></h3>
-  <h3>Last Name: <%= @user.last_name %></h3>
-  <h3>Email: <%= @user.email %></h3>
-  <h3>Birthday: <%= @user.birthday %></h3>
 
+    <p id="deleteprofilepara"> Delete this account</p>
+    <form id="deleteprofile" action="/users/<%= @user.id %>" method="post">
+      <input type="submit" value="Delete Account" onclick="alert('Account Deleted.')">
+    </form>
 
-  <hr>
-
-
-  <p id="deleteprofilepara"> Delete this account</p>
-  <form id="deleteprofile" action="/users/<%= @user.id %>" method="post">
-    <input type="submit" value="Delete Account" onclick="alert('Account Deleted.')">
-  </form>
-</div>
-
-
+  </div>
 
 
 
@@ -29,11 +28,11 @@
 <hr>
 
 <div class="container-profileposts">
-<% @posts.reverse.each do |ps| %>
+<% @user.posts.reverse.each do |ps| %>
 <h2 id="profile-header"><%= ps.title %></h2>
 <p id="profilepara"><%= ps.content %></p>
+<br>
 
-<p> Delete this post</p>
 <form action="/posts/<%= ps.id %>" method="post">
   <input type="submit" value="Delete Post">
 </form>

@@ -1,13 +1,12 @@
 /* HOME.ERB   */
 
-.homepage {
-  background-image:url('https://wallpaperplay.com/walls/full/e/d/f/219506.jpg');
-  background-size: cover;
-  height: 100%;
-  width: 100%;
+body {
+  background-color: #EBEBED;
 }
 
-
+#spacepica {
+  background-image:url('https://wallpaperplay.com/walls/full/e/d/f/219506.jpg');
+}
 
 .spacetum {
   display: flex;
@@ -44,9 +43,11 @@
 
 .row-header {
   float: right;
+  padding-right: 5px;
 }
+
 .navbtn {
-  padding: 10px;
+  padding: 5px;
   padding-bottom: 35px;
   border: 1px dashed #C4C4C9;
   color: white;
@@ -62,12 +63,25 @@
   text-shadow: 1px 0px 11px rgba(228,208,208,0.6);
   float:left;
 }
+
 #space1 {
   color: white;
 }
 
+#logout-icon {
+  height: 30px;
+  width: 30px;
+}
 
+#logout-form {
+  float: right;
+  padding-left: 8px;
+  padding-top: 8px;
+}
 
+#logout-form:active{
+  background-color: #626271;
+}
 
 
 /* SIGN-UP */
@@ -79,9 +93,10 @@
 #signuplog {
   display: flex;
   justify-content: center;
+  text-decoration: underline;
   align-items: center;
   text-shadow: 0px 2px 3px #9D9DA6;
-  padding-top: 5%
+  padding-top: 5%;
 }
 
 .signupform {
@@ -92,23 +107,19 @@
 
 /* LOG-IN */
 
-.container-login {
-
-}
-
 #headinglogin {
   display: grid;
   justify-content: center;
   align-items: center;
   padding-top: 10%;
   text-shadow: 0px 2px 3px #9D9DA6;
+  text-decoration: underline;
 }
 
 #loginform {
   display: grid;
   justify-content: center;
   align-items: center;
-
 }
 
 /* PROFILE */
@@ -125,32 +136,23 @@
   padding: 10px;
 }
 
-.container-profileposts{
-  display:inline-block;
+.container-profileposts {
+  display: grid;
   text-align: center;
-  margin-top: -514px;
 }
 
-
-
-#profilepara{
-  height: 5%;
+#profilepara {
+  display: grid;
   width: 30%;
-  display:inline-block;
-  text-align:justify;
-  vertical-align: middle;
   border: 1px dashed black;
-  padding: 10px;
+  margin: 0 auto;
 }
 
 #profile-header {
   font-size: 3em;
   text-indent: inherit;
   text-decoration: underline;
-
 }
-
-
 
 #deleteprofilepara {
 display: grid;
@@ -170,6 +172,7 @@ justify-content: center;
   text-align: center;
   padding-top: 100px;
 }
+
 #feed-header {
   font-size: 3em;
   text-indent: inherit;
@@ -184,5 +187,35 @@ justify-content: center;
   vertical-align: middle;
   border: 1px dashed black;
   padding: 10px;
+}
+/* NEW POSTS */
 
+#posterstrudel {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  text-align: center;
+}
+
+#entertitle {
+  width: 300px;
+  height: 30px;
+}
+
+#header-newpost {
+  padding-top: 5%;
+  text-shadow: 0px 2px 3px #9D9DA6;
+  text-decoration: underline;
+}
+
+/* DELETE POST*/
+ input[type=submit] {
+    background-color: #9D9DA6;
+    border: 1px solid rgb(214, 208, 159);
+}
+
+input[type=submit]:hover {
+  background-color: #626271;
+  border: 1px solid rgb(214, 208, 159);
 }
