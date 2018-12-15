@@ -28,7 +28,7 @@
 <hr>
 
 <div class="container-profileposts">
-<% @user.posts.reverse.each do |ps| %>
+<% @posts.reverse.each do |ps| %>
 <h2 id="profile-header"><%= ps.title %></h2>
 <p id="profilepara"><%= ps.content %></p>
 <br>
