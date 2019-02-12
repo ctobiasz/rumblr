@@ -1,25 +1,23 @@
-
 <div class="container-header">
-  <h1 id="space"><a href="/users/<%= session['user_id'] %>" id="space1">SPACE</a></h1>
+  <h1 id=""><a href="/users/<%= session['user_id'] %>" id="">SPACE</a></h1>
   <div class="row-header">
 
    <% if session['user_id'] == nil %>
-  <a class="navbtn" href="/">Home</a>
-  <a class="navbtn" href="/users/new">Sign-up</a>
-  <a class="navbtn" href="/users/?">All Users</a>
+    <a class="navbtn" href="/">Home</a>
+    <a class="navbtn" href="/users/new">Sign-up</a>
+    <a class="navbtn" href="/users/?">All Users</a>
    <% end %>
 
    <% if session['user_id'] %>
-  <a class="navbtn" href="/posts/new">New Post</a>
-  <a class="navbtn" href="/posts/?">Home Feed</a>
-  <a class="navbtn" href="/users/<%= session['user_id'] %>">My Profile</a>
-
-
+    <a class="navbtn" href="/posts/new">New Post</a>
+    <a class="navbtn" href="/posts/?">Home Feed</a>
+    <a class="navbtn" href="/users/<%= session['user_id'] %>">My Profile</a>
 
    <form id="logout-form" action='/logout' method="post">
-     <a href="/"><img id="logout-icon" src="/images/logout3.png"></a>
+     <a href="/">Logout</a>
    </form>
+   
    <% end %>
 
- </div>
- </div>
+  </div>
+</div>

@@ -1,221 +1,56 @@
-/* HOME.ERB   */
+@font-face {
+  font-family: Space-age;
+  src: url('space age.ttf');
+  font-weight: bold;
+}
+
+/* MAIN SCREEN */
 
 body {
-  background-color: #EBEBED;
+  background: #111;
+  margin: 0px;
 }
 
-#spacepica {
-  background-image:url('https://wallpaperplay.com/walls/full/e/d/f/219506.jpg');
-}
-
-.spacetum {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px;
-  margin-top: 10%;
-  font-family: 'Cinzel Decorative', cursive;
-  color: #C4C4C9;
-  text-shadow: 1px 0px 11px rgba(228,208,208,0.6);
-}
-
-
-.homebuttons {
-  display: grid;
-  justify-content: center;
-  vertical-align: middle;
-  width: auto;
-}
-
-
-
-/* NAVBAR */
-.container-header {
+.banner {
+  background-image: url("../images/space.jpg");
   width: 100%;
-  margin: 0;
-  height: 60px;
-  margin-right: 10%;
-  position: fixed;
-  background: #212132;
-  padding-bottom: 30px;
-  margin-bottom: 25px;
+  height: 100%;
+  position: absolute;
+  margin: 0px auto;
 }
 
-.row-header {
-  float: right;
-  padding-right: 5px;
-}
-
-.navbtn {
-  padding: 5px;
-  padding-bottom: 35px;
-  border: 1px dashed #C4C4C9;
-  color: white;
-
-}
-
-.navbtn:hover {
-  background: #626271;
-}
-
-#space {
-  font-family: 'Cinzel Decorative', cursive;
-  text-shadow: 1px 0px 11px rgba(228,208,208,0.6);
-  float:left;
-}
-
-#space1 {
-  color: white;
-}
-
-#logout-icon {
-  height: 30px;
-  width: 30px;
-}
-
-#logout-form {
-  float: right;
-  padding-left: 8px;
-  padding-top: 8px;
-}
-
-#logout-form:active{
-  background-color: #626271;
-}
-
-
-/* SIGN-UP */
-
-.container-signup {
-  padding-top: 5%;
-}
-
-#signuplog {
-  display: flex;
-  justify-content: center;
+.home-header {
+  font-family: 'Space-age';
+  font-size: 8em;
   text-decoration: underline;
-  align-items: center;
-  text-shadow: 0px 2px 3px #9D9DA6;
-  padding-top: 5%;
 }
 
-.signupform {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
-/* LOG-IN */
-
-#headinglogin {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+.home-container {
+  color: whitesmoke;
+  text-align: center;
   padding-top: 10%;
-  text-shadow: 0px 2px 3px #9D9DA6;
-  text-decoration: underline;
 }
 
-#loginform {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
-/* PROFILE */
-
-.container-profile {
-  border: 1px solid white;
-}
-
-.container-profile1 {
-  display: grid;
-  margin-top: 5%;
-  float: right;
-  border: 1px solid #626271;
+.home-container a {
+  font-family: 'Space-age';
+  font-size: 2em;
+  text-align: center;
+  display: block;
   padding: 10px;
 }
 
-.container-profileposts {
-  display: grid;
-  text-align: center;
+.home-container a:active {
+  color: whitesmoke;
 }
 
-#profilepara {
-  display: grid;
-  width: 30%;
-  border: 1px dashed black;
-  margin: 0 auto;
+.home-container a:visited {
+  color: whitesmoke;
 }
 
-#profile-header {
-  font-size: 3em;
-  text-indent: inherit;
-  text-decoration: underline;
-}
-
-#deleteprofilepara {
-display: grid;
-justify-content: center;
-}
-
-#deleteprofile {
-  display: grid;
-  justify-content: center;
-  padding-bottom: 2%;
-}
-
-/* HOME FEED */
-
-.container-feedposts {
-  display:inline-block;
-  text-align: center;
-  padding-top: 100px;
-}
-
-#feed-header {
-  font-size: 3em;
-  text-indent: inherit;
-  text-decoration: underline;
-}
-
-#feedpara {
-  height: 5%;
-  width: 30%;
-  display:inline-block;
-  text-align:justify;
-  vertical-align: middle;
-  border: 1px dashed black;
-  padding: 10px;
-}
-/* NEW POSTS */
-
-#posterstrudel {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5%;
-  text-align: center;
-}
-
-#entertitle {
-  width: 300px;
-  height: 30px;
-}
-
-#header-newpost {
-  padding-top: 5%;
-  text-shadow: 0px 2px 3px #9D9DA6;
-  text-decoration: underline;
-}
-
-/* DELETE POST*/
- input[type=submit] {
-    background-color: #9D9DA6;
-    border: 1px solid rgb(214, 208, 159);
-}
-
-input[type=submit]:hover {
-  background-color: #626271;
-  border: 1px solid rgb(214, 208, 159);
+.home-container a:hover {
+  text-decoration: overline;
+  text-shadow: -1px 0 rgb(56, 56, 56), 0 1px , 1px 0 , 0 -1px rgb(56, 56, 56);
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+  color: #3BA3E6;
 }
