@@ -12,12 +12,24 @@ body {
 }
 
 .banner {
-  background-image: url("../images/space.jpg");
+  background-image: url("../images/stars.png"), url("../images/stars.png"), url("../images/stars.png");
+  /* url("../images/space.jpg") */
   width: 100%;
   height: 100%;
   position: absolute;
   margin: 0px auto;
+  background-position: 0px 0px, 0px 0px, 0px 0px;
+	background-repeat: repeat repeat repeat;
+	animation: animate-background 50s linear infinite;
 }
+
+@keyframes animate-background {
+	from { background-position: 0px 0px, 0px 0px, 0px 0px;  }
+	to { background-position: -100px 0px, -3000px 0px, -10000px 0px; }
+}
+
+
+
 
 .home-header {
   font-family: 'Space-age';
