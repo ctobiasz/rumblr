@@ -28,9 +28,6 @@ body {
 	to { background-position: -100px 0px, -3000px 0px, -10000px 0px; }
 }
 
-
-
-
 .home-header {
   font-family: 'Space-age';
   font-size: 8em;
@@ -44,11 +41,12 @@ body {
 }
 
 .home-container a {
+  display: block;
   font-family: 'Space-age';
   font-size: 2em;
   text-align: center;
-  display: block;
   padding: 10px;
+
 }
 
 .home-container a:active {
@@ -63,6 +61,6 @@ body {
   text-decoration: overline;
   text-shadow: -1px 0 rgb(56, 56, 56), 0 1px , 1px 0 , 0 -1px rgb(56, 56, 56);
   transition: all .2s ease-in-out;
-  transform: scale(1.1);
+  font-size: 2.5em;
   color: #3BA3E6;
 }
