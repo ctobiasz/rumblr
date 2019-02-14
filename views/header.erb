@@ -1,23 +1,47 @@
-<div class="container-header">
-  <h1 id=""><a href="/users/<%= session['user_id'] %>" id="">SPACE</a></h1>
-  <div class="row-header">
+<nav class="navbar">
+  <span class="navbar-toggle" id="js-navbar-toggle">
+    <i class="fas fa-bars"></i>
+  </span>
+  <a href="/" class="logo">SPACE <i class="fas fa-rocket"></i></a>
+
+  <ul class="main-nav" id="js-menu">
 
    <% if session['user_id'] == nil %>
-    <a class="navbtn" href="/">Home</a>
-    <a class="navbtn" href="/users/new">Sign-up</a>
-    <a class="navbtn" href="/users/?">All Users</a>
+
+    <li><a class="navbtn" href="/">Home</a></li>
+    <li><a class="navbtn" href="/users/new">Sign-up</a></li>
+    <li><a class="navbtn" href="/users/?">All Users</a></li>
    <% end %>
 
-   <% if session['user_id'] %>
-    <a class="navbtn" href="/posts/new">New Post</a>
-    <a class="navbtn" href="/posts/?">Home Feed</a>
-    <a class="navbtn" href="/users/<%= session['user_id'] %>">My Profile</a>
+  <% if session['user_id'] %>
+    <li><a class="navbtn" href="/posts/new">New Post</a></li>
+
+    <li><a class="navbtn" href="/posts/?">Feed</a></li>
+
+    <li><a class="navbtn" href="/users/<%= session['user_id'] %>">Profile</a></li>
 
    <form id="logout-form" action='/logout' method="post">
      <a href="/">Logout</a>
    </form>
-   
+
+</ul>
+</nav>
    <% end %>
 
   </div>
 </div>
+
+
+
+
+
+
+
+<!-- JQUERY FUNCTION FOR RESPONSIVE MENU -->
+    <script>
+       let mainNav = document.getElementById("js-menu");
+       let navBarToggle = document.getElementById("js-navbar-toggle");
+         navBarToggle.addEventListener("click", function() {
+         mainNav.classList.toggle("active");
+           });
+    </script>
