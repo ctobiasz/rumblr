@@ -64,20 +64,3 @@ body {
   font-size: 2.5em;
   color: #3BA3E6;
 }
-
-.home-btn {
-}
-
-/* ADDING PLANETS FOR FRONT PAGE */
-
-#planet1 {
-  height: 100px;
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 47.6%;
-  position: relative;
-  shape-outside: circle();
-  filter: grayscale();
-}
