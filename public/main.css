@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 /* CUSTOM FONT FOR FRONT-PAGE */
 @font-face {
   font-family: Space-age;
@@ -9,6 +11,7 @@
 
 body {
   margin: 0px;
+  background-color: #fff;
 }
 
 /*PARALLAX EFFECT FOR BACKGROUND FOR FRONT-PAGE */
@@ -69,12 +72,24 @@ body {
 
 /* SIGN-UP PAGE */
 
-.container-signup {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -80%);
+#signup-body {
+  background: url("../images/blue2.png") !important;
+}
 
+#signup-header {
+  font-family: 'Space-age';
+  font-size: 2em;
+  border-bottom: 3px solid black;
+
+}
+
+.container-signup {
+  background-color:  rgb(172, 172, 172) !important;
+  border: 5px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
 }
 
 .signup-form {
@@ -82,6 +97,10 @@ transform: translate(-50%, -80%);
   padding-right: 30px;
   vertical-align: middle;
   text-align: center;
+}
+
+input {
+  font-family: 'Poppins', sans-serif;
 }
 
 input[type=text], select {
@@ -122,19 +141,20 @@ input[type=date], select {
 }
 
 input[type=submit] {
+  font-family: 'Space-age';
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #1985A1;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1.3em;
 }
 
 input[type=submit]:hover {
-  background-color: #C5C3C6;
-  border: 1px dashed white;
+  text-decoration: underline;
 }
 
 div.container-signup {
@@ -162,7 +182,8 @@ div.container-signup {
 .nav-links,
 .logo {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: whitesmoke;
+  font-family: "Space-age";
 }
 
 .main-nav li {

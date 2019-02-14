@@ -8,19 +8,19 @@
 
    <% if session['user_id'] == nil %>
 
-    <li><a class="navbtn" href="/">Home</a></li>
-    <li><a class="navbtn" href="/users/new">Sign-up</a></li>
-    <li><a class="navbtn" href="/users/?">All Users</a></li>
+    <li><a class="navbtn nav-links" href="/">Home</a></li>
+    <li><a class="navbtn nav-links" href="/users/new">Sign-up</a></li>
+    <!-- <li><a class="navbtn nav-links" href="/users/?">All Users</a></li> -->
    <% end %>
 
   <% if session['user_id'] %>
-    <li><a class="navbtn" href="/posts/new">New Post</a></li>
+    <li><a class="navbtn nav-links" href="/posts/new">New Post</a></li>
 
-    <li><a class="navbtn" href="/posts/?">Feed</a></li>
+    <li><a class="navbtn nav-links" href="/posts/?">Feed</a></li>
 
-    <li><a class="navbtn" href="/users/<%= session['user_id'] %>">Profile</a></li>
+    <li><a class="navbtn nav-links" href="/users/<%= session['user_id'] %>">Profile</a></li>
 
-   <form id="logout-form" action='/logout' method="post">
+   <form class="navbtn nav-links" id="logout-form" action='/logout' method="post">
      <a href="/">Logout</a>
    </form>
 
