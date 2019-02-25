@@ -252,3 +252,8 @@ div.container-signup {
     color: rgba(255, 255, 255, 1);
   }
 }
+
+  #log-out-link {
+    color: white;
+    text-decoration: none;
+  }

@@ -1,7 +1,7 @@
 
-<div class="container-profile">
+<div class="">
 
-  <div class="container-profile1">
+  <div class="">
 
     <h1> <%= @user.first_name %>'s  Profile </h1>
     <hr>
@@ -27,10 +27,10 @@
 
 <hr>
 
-<div class="container-profileposts">
+<div class="">
 <% @posts.reverse.each do |ps| %>
-<h2 id="profile-header"><%= ps.title %></h2>
-<p id="profilepara"><%= ps.content %></p>
+<h2 id=""><%= ps.title %></h2>
+<p id=""><%= ps.content %></p>
 <br>
 
 <form action="/posts/<%= ps.id %>" method="post">
