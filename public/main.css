@@ -288,3 +288,11 @@ div.container-signup {
   }
 
   /* USER FEED */
+
+  .container-feedposts {
+    display: grid;
+    grid-row: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
