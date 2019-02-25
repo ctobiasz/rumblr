@@ -296,3 +296,15 @@ div.container-signup {
     justify-content: center;
     text-align: center;
   }
+
+
+  /* POSTS */
+
+  .entertitle {
+    width: 100%;
+  }
+
+
+   #post-text-area {
+    width: 100%;
+   }
