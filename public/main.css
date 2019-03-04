@@ -54,6 +54,10 @@ body {
 
 }
 
+.home-container a:link {
+  color: whitesmoke;
+}
+
 .home-container a:active {
   color: whitesmoke;
 }
