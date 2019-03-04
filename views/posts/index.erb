@@ -1,4 +1,18 @@
-<div class="container-feedposts">
+<style media="screen">
+  .container-feedpostss {
+    padding-top: 12000px;
+    margin-right: 30%;
+    display: grid;
+    grid-row: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+  }
+</style>
+
+<div class="container-feedpostss">
 <% @posts.each do |ps| %>
 <h2 id="feed-header"><%= ps.title %></h2>
 <p id="feedpara"><%= ps.content %></p>
