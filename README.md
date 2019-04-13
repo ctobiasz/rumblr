@@ -8,6 +8,6 @@
 > The theme for this website was space related. I wanted to include a parallax effect on the main domain and a alienish typography. I ended up using CSS to make the background more animated.
 
 
-# Languages & Frameworks
+# Technologies Used
 > This was made with Ruby and Sinatra!
 
